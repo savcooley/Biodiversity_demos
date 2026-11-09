@@ -20,22 +20,23 @@
 
 > **Presenter note:** Downloading/streaming GEDI granules can take 20–60 minutes, depending on the date range. Run Sections 1–4 before the live session with `SAVE_CACHE = True`. During the live demo, run with `USE_CACHE = True` so the notebook starts from the saved footprint table.
 
-Part 2 – Demo 3: Linking GEDI Forest Structure with Bird and Mammal Diversity
-Goal: Reproduce the core analysis of Luther et al. (2026), Satellite-based forest structure metrics as a predictive tool for biodiversity in hyperdiverse tropical forests (Environmental and Sustainability Indicators 30: 101212). We test whether GEDI forest structure predicts bird and mammal occupancy at the Biological Dynamics of Forest Fragments Project (BDFFP), then interpret the model diagnostics and outputs.
+## Part 2 – Demo 3: Linking GEDI Forest Structure with Bird and Mammal Diversity
+**Goal:** Reproduce the core analysis of Luther et al. (2026), Satellite-based forest structure metrics as a predictive tool for biodiversity in hyperdiverse tropical forests (Environmental and Sustainability Indicators 30: 101212). We test whether GEDI forest structure predicts bird and mammal occupancy at the Biological Dynamics of Forest Fragments Project (BDFFP), then interpret the model diagnostics and outputs.
 
-Tools: Python (pymc + numpyro for Bayesian models, statsmodels, pandas, matplotlib) in Google Colab
+**Tools:** Python (pymc + numpyro for Bayesian models, statsmodels, pandas, matplotlib) in Google Colab
 
-Data (Luther et al. 2026, shared by D. Luther):
+**Data:**  (Luther et al. 2026, shared by D. Luther):
 
 Daily detection/non-detection of 184 species from 31 AudioMoth recorders and 41 species from 73 camera traps (June–October 2022)
 GEDI forest-structure metrics for the 18 sampling units with GEDI coverage (unit means of quality-filtered footprints, as produced in Demo 2)
 Acoustic space use (ASU) and observed species richness per sampling unit
-What you will do
 
-Load the in situ detection data and the site-level GEDI metrics
-Check collinearity among GEDI metrics (why each metric gets its own model)
-Quick look: does the soundscape (ASU) track species richness and forest structure?
-Fit the integrated community occupancy model that combines audio and camera detections
-Rank 12 GEDI predictors plus a null model with WAIC
-Interpret community and species-level responses to FHD, and compare forest types
+**What you will do:** 
+1. Load the in situ detection data and the site-level GEDI metrics
+2. Check collinearity among GEDI metrics (why each metric gets its own model)
+3. Quick look: does the soundscape (ASU) track species richness and forest structure?
+4 Fit the integrated community occupancy model that combines audio and camera detections
+5 Rank 12 GEDI predictors plus a null model with WAIC
+6 Interpret community and species-level responses to FHD, and compare forest types
+
 About the code: The original analysis was run in R with spOccupancy::intMsPGOcc() (scripts shared by the authors). This notebook re-implements the same model structure in Python with PyMC, so participants do not need R. Priors and the sampler differ from spOccupancy, so numbers will be close to, but not identical with, the published values.
