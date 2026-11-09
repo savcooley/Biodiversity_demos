@@ -1,6 +1,6 @@
 # Biodiversity_demos
 
-# Assessing Biodiversity Using Forest Structure from Spaceborne Lidar
+# Scaling Biodiversity Monitoring with Spaceborne Lidar and Field Data
 ## Part 2 – Demo 2: Comparing Forest Structure Across the BDFFP Landscape with GEDI
 
 **Goal:** Derive GEDI forest-structure metrics for the Biological Dynamics of Forest Fragments Project (BDFFP), north of Manaus, Brazil. Then map vertical structural complexity and compare forest fragments, secondary forest and continuous mature forest.
